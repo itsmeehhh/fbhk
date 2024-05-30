@@ -1,0 +1,8 @@
+requests
+pyfiglet
+colorama
+random
+os
+sys
+time
+socketserver
