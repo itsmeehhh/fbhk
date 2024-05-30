@@ -64,18 +64,16 @@ address = ("", port)
 
 try:
     with socketserver.TCPServer(address, MyRequestHandler) as server:
-        print(f"Server is running on port {port}")
+        print(f"الخادم يعمل على المنفذ {port}")
         server.serve_forever()
 except OSError as e:
     if e.errno == 98:
-        print("Port is already in use. Restarting the server...")
-        # إيقاف الخادم الحالي
+        print("المنفذ مستخدم بالفعل. جاري إعادة تشغيل الخادم...")
         server.shutdown()
         server.server_close()
-        # إعادة إنشاء الخادم على نفس المنفذ
         with socketserver.TCPServer(address, MyRequestHandler) as server:
-            print(f"Server is running on port {port}")
+            print(f"الخادم يعمل على المنفذ {port}")
             server.serve_forever()
     else:
-        print(f"Error: {e}")
+        print(f"خطأ: {e}")
         sys.exit(1)

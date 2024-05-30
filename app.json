@@ -1,0 +1,21 @@
+{
+  "name": "trt-app",
+  "description": "تطبيق python على Heroku ",
+  "scripts": {
+    "start": "python3 main.py"
+  },
+  "engines": {
+    "python": "^3.8"
+  },
+  "env": {
+    ".": {
+      "description": "nothing",
+      "required": false,
+      "value": ""
+    }
+    },
+  "devDependencies": {},
+  "repository": "https://github.com/Bomiro",
+  "keywords": ["Node.js", "Heroku"],
+  "license": "رخصة-البرنامج"
+}
